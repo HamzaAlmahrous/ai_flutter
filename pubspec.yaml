@@ -1,0 +1,42 @@
+name: tmdb_project
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+  dio: ^5.0.0
+  get_it: ^7.2.0
+  dartz: ^0.10.1
+  equatable: ^2.0.5
+  carousel_slider: ^4.2.1
+  flutter_bloc: ^8.1.2
+  google_nav_bar: ^5.0.6
+  line_icons: ^2.0.1
+  tflite_flutter: ^0.9.0
+  
+  image_picker: ^0.7.4
+  collection: ^1.15.0
+  logger: ^1.0.0
+  path_provider:
+  tflite_flutter_helper:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
