@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:line_icons/line_icons.dart';
 import 'package:tmdb_project/core/util/themes.dart';
 import 'package:tmdb_project/features/image_detector/presentation/pages/image_classifier_page.dart';
 import 'package:tmdb_project/features/text_detector/presentation/pages/text_positivity_page.dart';
@@ -105,7 +104,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                           text: '  Image',
                         ),
                         GButton(
-                          icon: LineIcons.user,
+                          icon: Icons.person,
                           text: '  Profile',
                         )
                       ]),

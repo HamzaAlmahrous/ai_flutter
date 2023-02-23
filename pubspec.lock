@@ -30,19 +30,19 @@ packages:
     source: hosted
     version: "2.1.0"
   camera:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: camera
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.8+1"
+    version: "0.10.3+1"
   camera_android:
     dependency: transitive
     description:
       name: camera_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.8+3"
+    version: "0.10.4+1"
   camera_avfoundation:
     dependency: transitive
     description:
@@ -63,14 +63,7 @@ packages:
       name: camera_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.1+6"
-  carousel_slider:
-    dependency: "direct main"
-    description:
-      name: carousel_slider
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.2.1"
+    version: "0.3.1+2"
   characters:
     dependency: transitive
     description:
@@ -86,7 +79,7 @@ packages:
     source: hosted
     version: "1.1.1"
   collection:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: collection
       url: "https://pub.dartlang.org"
@@ -261,13 +254,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.4"
-  line_icons:
-    dependency: "direct main"
-    description:
-      name: line_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.1"
   lints:
     dependency: transitive
     description:
@@ -275,13 +261,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
-  logger:
-    dependency: "direct main"
-    description:
-      name: logger
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
   matcher:
     dependency: transitive
     description:
@@ -318,7 +297,7 @@ packages:
     source: hosted
     version: "1.8.2"
   path_provider:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -475,7 +454,7 @@ packages:
       name: tflite_flutter_helper
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.1"
+    version: "0.2.1"
   tuple:
     dependency: transitive
     description:
