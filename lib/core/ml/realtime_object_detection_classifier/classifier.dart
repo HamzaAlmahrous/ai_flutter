@@ -43,8 +43,8 @@ class Classifier {
   static const int numResult = 10;
 
   Classifier({
-    required Interpreter interpreter,
-    required List<String> labels,
+    Interpreter? interpreter,
+    List<String>? labels,
   }) {
     loadModel(interpreter: interpreter);
     loadLabels(labels: labels);

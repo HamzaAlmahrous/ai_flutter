@@ -1,60 +1,59 @@
-// import 'dart:math';
+import 'dart:math';
 
-// import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 
-// /// Represents the recognition output from the model
-// class Recognition {
-//   /// Index of the result
-//   int _id;
+import '../../../features/realtime_object_detection/presentation/widgets/camera_view_singleton.dart';
 
-//   /// Label of the result
-//   String _label;
+/// Represents the recognition output from the model
+class Recognition {
+  /// Index of the result
+  late int _id;
 
-//   /// Confidence [0.0, 1.0]
-//   double _score;
+  /// Label of the result
+  late String _label;
 
-//   /// Location of bounding box rect
-//   ///
-//   /// The rectangle corresponds to the raw input image
-//   /// passed for inference
-//   Rect _location;
+  /// Confidence [0.0, 1.0]
+  late double _score;
 
-//   Recognition(this._id, this._label, this._score, [this._location]);
+  /// Location of bounding box rect
+  ///
+  /// The rectangle corresponds to the raw input image
+  /// passed for inference
+  late  Rect? _location;
 
-//   int get id => _id;
+  Recognition(this._id, this._label, this._score, [this._location]);
 
-//   String get label => _label;
+  int get id => _id;
 
-//   double get score => _score;
+  String get label => _label;
 
-//   Rect get location => _location;
+  double get score => _score;
 
-//   /// Returns bounding box rectangle corresponding to the
-//   /// displayed image on screen
-//   ///
-//   /// This is the actual location where rectangle is rendered on
-//   /// the screen
-//   Rect get renderLocation {
-//     // ratioX = screenWidth / imageInputWidth
-//     // ratioY = ratioX if image fits screenWidth with aspectRatio = constant
+  Rect get location => _location!;
 
-//     double ratioX = CameraViewSingleton.ratio;
-//     double ratioY = ratioX;
+  /// Returns bounding box rectangle corresponding to the
+  /// displayed image on screen
+  ///
+  /// This is the actual location where rectangle is rendered on
+  /// the screen
+  Rect get renderLocation {
+    // ratioX = screenWidth / imageInputWidth
+    // ratioY = ratioX if image fits screenWidth with aspectRatio = constant
 
-//     double transLeft = max(0.1, location.left * ratioX);
-//     double transTop = max(0.1, location.top * ratioY);
-//     double transWidth = min(
-//         location.width * ratioX, CameraViewSingleton.actualPreviewSize.width);
-//     double transHeight = min(
-//         location.height * ratioY, CameraViewSingleton.actualPreviewSize.height);
+    double ratioX = CameraViewSingleton.ratio!;
+    double ratioY = ratioX;
 
-//     Rect transformedRect =
-//         Rect.fromLTWH(transLeft, transTop, transWidth, transHeight);
-//     return transformedRect;
-//   }
+    double transLeft = max(0.1, location.left * ratioX);
+    double transTop = max(0.1, location.top * ratioY);
+    double transWidth = min(location.width * ratioX, CameraViewSingleton.actualPreviewSize!.width);
+    double transHeight = min(location.height * ratioY, CameraViewSingleton.actualPreviewSize!.height);
 
-//   @override
-//   String toString() {
-//     return 'Recognition(id: $id, label: $label, score: $score, location: $location)';
-//   }
-// }
+    Rect transformedRect = Rect.fromLTWH(transLeft, transTop, transWidth, transHeight);
+    return transformedRect;
+  }
+
+  @override
+  String toString() {
+    return 'Recognition(id: $id, label: $label, score: $score, location: $location)';
+  }
+}
