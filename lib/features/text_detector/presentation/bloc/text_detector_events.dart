@@ -12,3 +12,8 @@ class DetectTextPositivityEvent extends TextDetectorEvent {
   @override
   List<Object> get props => [text];
 }
+
+class AddExampleEvent extends TextDetectorEvent {
+  @override
+  List<Object> get props => [];
+}

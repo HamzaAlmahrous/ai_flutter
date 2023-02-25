@@ -23,9 +23,13 @@ class TextPositivityPage extends StatelessWidget {
       height = constraints.maxHeight;
       width = constraints.maxWidth;
       return BlocProvider(
-        create: (BuildContext context) => sl<TextDetectorBloc>(),
+        create: (BuildContext context) => sl<TextDetectorBloc>()..add(AddExampleEvent()),
         child: BlocBuilder<TextDetectorBloc, TextDetectorState>(
             builder: (context, state) {
+              if(state is AddExampleSuccessState){
+                textList.add(TextDetectorCard(height: height, width: width, color: Colors.red, text: "this movie was a waste of time"));
+                textList.add(TextDetectorCard(height: height, width: width, color: Colors.green, text: "I LOVE YOU"));
+              }
           return Stack(
             children: [
               ListView.builder(

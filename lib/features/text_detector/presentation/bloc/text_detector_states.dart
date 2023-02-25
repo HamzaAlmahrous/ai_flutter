@@ -28,3 +28,17 @@ class DetectTextPositivityErrorState extends TextDetectorState {
   @override
   List<Object> get props => [message];
 }
+
+//add example
+
+class AddExampleLoadingState extends TextDetectorState {}
+
+class AddExampleSuccessState extends TextDetectorState {}
+class AddExampleErrorState extends TextDetectorState {
+
+  final String message;
+  AddExampleErrorState({required this.message});
+  
+  @override
+  List<Object> get props => [message];
+}
