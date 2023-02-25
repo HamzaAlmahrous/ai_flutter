@@ -40,11 +40,7 @@ class _RealTimeObjectDetectionPageState extends State<RealTimeObjectDetectionPag
       body: Stack(
         children: [
           CameraView(resultsCallback, statsCallback),
-
-          // Bounding boxes
           boundingBoxes(results),
-
-          // Bottom Sheet
           Align(
             alignment: Alignment.bottomCenter,
             child: DraggableScrollableSheet(

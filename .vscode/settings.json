@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
+        "datasource",
         "Gnav",
         "labelmap",
         "mobilenet",
+        "sublist",
         "TMDB"
     ],
     "cmake.configureOnOpen": false

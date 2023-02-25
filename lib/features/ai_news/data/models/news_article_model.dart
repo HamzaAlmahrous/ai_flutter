@@ -22,6 +22,6 @@ class NewsArticleModel extends NewsArticle{
     url: json["url"],
     urlToImage: json["urlToImage"],
     content: json["content"],
-    publishedAt: json["publishedAt"],
+    publishedAt: DateTime.parse(json["publishedAt"].toString()),
   );
 }

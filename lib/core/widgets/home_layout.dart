@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tmdb_project/core/util/themes.dart';
+import 'package:tmdb_project/features/ai_news/presentation/pages/ai_news_page.dart';
 import 'package:tmdb_project/features/image_detector/presentation/pages/image_classifier_page.dart';
 import 'package:tmdb_project/features/realtime_object_detection/presentation/pages/realtime_object_detection_page.dart';
 import 'package:tmdb_project/features/text_detector/presentation/pages/text_positivity_page.dart';
@@ -19,7 +20,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   late double height;
   int selectedIndex = 0;
   late double width;
-  Widget body = TextPositivityPage();
+  Widget body = AINewsPage();
 
   @override
   Widget build(BuildContext context) {
@@ -34,38 +35,8 @@ class _HomeLayoutState extends State<HomeLayout> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: height * 0.10,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      const SizedBox(
-                        width: 40.0,
-                      ),
-                      const Spacer(),
-                      const Text(
-                        'AI APP',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      const Spacer(),
-                      IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.more_vert,
-                            color: Colors.white,
-                            size: 20,
-                          )),
-                    ],
-                  ),
-                ),
                 SizedBox(
-                  height: 0.82 * height,
+                  height: 0.92 * height,
                   child: body,
                 ),
                 Container(
@@ -76,7 +47,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                   child: GNav(
                     onTabChange: (index){
                       setState(() { 
-                        body = (index == 0 && selectedIndex != index) ? TextPositivityPage()
+                        body = (index == 0 && selectedIndex != index) ? AINewsPage()
                         : (index == 1 && selectedIndex != index)? TextPositivityPage()
                         : (index == 2 && selectedIndex != index)? ImageClassifierPage()
                         : (index == 3 && selectedIndex != index)? const RealTimeObjectDetectionPage()
