@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import '../../../../core/ml/realtime_object_detection_classifier/recognition.dart';
 
@@ -9,9 +11,7 @@ class BoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Color for bounding box
-    Color color = Colors.primaries[
-        (result!.label.length + result!.label.codeUnitAt(0) + result!.id) %
-            Colors.primaries.length];
+    Color color = Colors.primaries[(result!.label.length + result!.label.codeUnitAt(0) + result!.id) % Colors.primaries.length];
 
     return Positioned(
       left: result!.renderLocation.left,
@@ -22,8 +22,9 @@ class BoxWidget extends StatelessWidget {
         width: result!.renderLocation.width,
         height: result!.renderLocation.height,
         decoration: BoxDecoration(
-            border: Border.all(color: color, width: 3),
-            borderRadius: const BorderRadius.all(Radius.circular(2))),
+          border: Border.all(color: color, width: 3),
+          borderRadius: const BorderRadius.all(Radius.circular(2)),
+        ),
         child: Align(
           alignment: Alignment.topLeft,
           child: FittedBox(

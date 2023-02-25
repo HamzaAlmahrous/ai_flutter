@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages, constant_identifier_names, unnecessary_null_comparison
+// ignore_for_file: depend_on_referenced_packages, constant_identifier_names, unnecessary_null_comparison, unused_field
 
 import 'dart:io';
 import 'dart:isolate';

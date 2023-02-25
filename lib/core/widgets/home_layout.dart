@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tmdb_project/core/util/themes.dart';
 import 'package:tmdb_project/features/image_detector/presentation/pages/image_classifier_page.dart';
+import 'package:tmdb_project/features/realtime_object_detection/presentation/pages/realtime_object_detection_page.dart';
 import 'package:tmdb_project/features/text_detector/presentation/pages/text_positivity_page.dart';
 
 // ignore: must_be_immutable
@@ -64,19 +65,22 @@ class _HomeLayoutState extends State<HomeLayout> {
                   ),
                 ),
                 SizedBox(
-                  height: 0.81 * height,
+                  height: 0.82 * height,
                   child: body,
                 ),
-                SizedBox(
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   width: width,
-                  height: height * 0.09,
+                  height: height * 0.08,
+                  color: aiDarkPurple,
                   child: GNav(
                     onTabChange: (index){
                       setState(() { 
                         body = (index == 0 && selectedIndex != index) ? TextPositivityPage()
                         : (index == 1 && selectedIndex != index)? TextPositivityPage()
                         : (index == 2 && selectedIndex != index)? ImageClassifierPage()
-                        : TextPositivityPage();
+                        : (index == 3 && selectedIndex != index)? const RealTimeObjectDetectionPage()
+                        : Container();
                         selectedIndex = index;
                       });
                     },
@@ -104,8 +108,8 @@ class _HomeLayoutState extends State<HomeLayout> {
                           text: '  Image',
                         ),
                         GButton(
-                          icon: Icons.person,
-                          text: '  Profile',
+                          icon: Icons.video_camera_back_rounded,
+                          text: '  Object',
                         )
                       ]),
                 )

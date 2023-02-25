@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, depend_on_referenced_packages
+// ignore_for_file: avoid_print, depend_on_referenced_packages, unnecessary_null_comparison
 
 import 'dart:math';
 import 'dart:ui';
@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:image/image.dart' as image_lib;
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+import 'package:tmdb_project/core/ml/realtime_object_detection_classifier/recognition.dart';
 
 import 'stats.dart';
 
@@ -28,7 +29,7 @@ class Classifier {
   static const double threshold = 0.5;
 
   /// [ImageProcessor] used to pre-process the image
-  late ImageProcessor? imageProcessor;
+  ImageProcessor? imageProcessor;
 
   /// Padding the image to transform into square
   late int padSize;
@@ -75,7 +76,7 @@ class Classifier {
   void loadLabels({List<String>? labels}) async {
     try {
       _labels =
-          labels ?? await FileUtil.loadLabels("assets/" + labelFileName);
+          labels ?? await FileUtil.loadLabels("assets/$labelFileName");
     } catch (e) {
       print("Error while loading labels: $e");
     }
@@ -155,7 +156,7 @@ class Classifier {
       width: inputSize,
     );
 
-    // List<Recognition> recognitions = [];
+    List<Recognition> recognitions = [];
 
     for (int i = 0; i < resultsCount; i++) {
       // Prediction score
@@ -172,9 +173,9 @@ class Classifier {
         Rect transformedRect = imageProcessor!.inverseTransformRect(
             locations[i], image.height, image.width);
 
-        // recognitions.add(
-        //   Recognition(i, label, score, transformedRect),
-        // );
+        recognitions.add(
+          Recognition(i, label, score, transformedRect),
+        );
       }
     }
 
@@ -182,7 +183,7 @@ class Classifier {
         DateTime.now().millisecondsSinceEpoch - predictStartTime;
 
     return {
-      // "recognitions": recognitions,
+      "recognitions": recognitions,
       "stats": Stats(
           totalPredictTime: predictElapsedTime,
           inferenceTime: inferenceTimeElapsed,

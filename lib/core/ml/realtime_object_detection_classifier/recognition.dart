@@ -7,19 +7,19 @@ import '../../../features/realtime_object_detection/presentation/widgets/camera_
 /// Represents the recognition output from the model
 class Recognition {
   /// Index of the result
-  late int _id;
+  final int _id;
 
   /// Label of the result
-  late String _label;
+  final String _label;
 
   /// Confidence [0.0, 1.0]
-  late double _score;
+  final double _score;
 
   /// Location of bounding box rect
   ///
   /// The rectangle corresponds to the raw input image
   /// passed for inference
-  late  Rect? _location;
+  final Rect? _location;
 
   Recognition(this._id, this._label, this._score, [this._location]);
 
