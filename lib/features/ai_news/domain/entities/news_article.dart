@@ -10,7 +10,7 @@ class NewsArticle extends Equatable{
   final String content;
   final DateTime publishedAt;
 
-  const NewsArticle(this.sourceName, this.author, this.title, this.description, this.url, this.urlToImage, this.content, this.publishedAt);
+  const NewsArticle({required this.sourceName, required this.author, required this.title, required this.description, required this.url, required this.urlToImage, required this.content, required this.publishedAt});
 
 
   @override
