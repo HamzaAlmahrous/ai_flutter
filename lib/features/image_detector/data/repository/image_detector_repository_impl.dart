@@ -1,6 +1,6 @@
-import 'package:tmdb_project/core/error/failure.dart';
+import '/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:tmdb_project/features/image_detector/domain/repository/image_detector_repository.dart';
+import '/features/image_detector/domain/repository/image_detector_repository.dart';
 import '../data_sources/image_detector_local_data_source.dart';
 
 

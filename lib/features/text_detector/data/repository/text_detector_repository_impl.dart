@@ -1,7 +1,7 @@
-import 'package:tmdb_project/core/error/failure.dart';
+import '/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:tmdb_project/features/text_detector/data/data_sources/text_detector_local_data_source.dart';
-import 'package:tmdb_project/features/text_detector/domain/repository/text_detector_repository.dart';
+import '/features/text_detector/data/data_sources/text_detector_local_data_source.dart';
+import '/features/text_detector/domain/repository/text_detector_repository.dart';
 
 class TextDetectorRepositoryImpl extends TextDetectorRepository{
   final TextDetectorLocalDataSource textDetectorLocalDataSource;

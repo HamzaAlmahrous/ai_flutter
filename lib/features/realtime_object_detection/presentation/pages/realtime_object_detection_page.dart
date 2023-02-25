@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison, constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:tmdb_project/core/util/themes.dart';
+import '/core/util/themes.dart';
 
 import '../../../../core/ml/realtime_object_detection_classifier/recognition.dart';
 import '../../../../core/ml/realtime_object_detection_classifier/stats.dart';
@@ -32,6 +32,12 @@ class _RealTimeObjectDetectionPageState extends State<RealTimeObjectDetectionPag
 
   /// Scaffold Key
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +128,7 @@ class StatsRow extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Text(left), Text(right)],
+        children: [Text(left, style: TextStyle(color: aiWhite),), Text(right, style: TextStyle(color: aiWhite))],
       ),
     );
   }

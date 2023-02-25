@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:tmdb_project/core/util/themes.dart';
-import 'package:tmdb_project/features/ai_news/presentation/pages/ai_news_page.dart';
-import 'package:tmdb_project/features/image_detector/presentation/pages/image_classifier_page.dart';
-import 'package:tmdb_project/features/realtime_object_detection/presentation/pages/realtime_object_detection_page.dart';
-import 'package:tmdb_project/features/text_detector/presentation/pages/text_positivity_page.dart';
+import '/core/util/themes.dart';
+import '/features/ai_news/presentation/pages/ai_news_page.dart';
+import '/features/image_detector/presentation/pages/image_classifier_page.dart';
+import '/features/realtime_object_detection/presentation/pages/realtime_object_detection_page.dart';
+import '/features/text_detector/presentation/pages/text_positivity_page.dart';
 
 // ignore: must_be_immutable
 class HomeLayout extends StatefulWidget {
@@ -36,7 +36,7 @@ class _HomeLayoutState extends State<HomeLayout> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  height: height * 0.08,
+                  height: height * 0.07,
                   child: AppBar(
                     centerTitle: true,
                     title: const Text("AI APP"),
@@ -44,7 +44,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                   ),
                 ),
                 SizedBox(
-                  height: 0.84 * height,
+                  height: 0.85 * height,
                   child: body,
                 ),
                 Container(

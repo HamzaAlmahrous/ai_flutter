@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_project/core/util/input_validation.dart';
+import '/core/util/input_validation.dart';
 
 Future<String?> dialogBuilder(BuildContext context) {
     TextEditingController textEditingController = TextEditingController();

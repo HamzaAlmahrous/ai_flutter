@@ -1,7 +1,7 @@
-import 'package:tmdb_project/core/error/failure.dart';
+import '/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:tmdb_project/core/usecase/usecase.dart';
-import 'package:tmdb_project/features/ai_news/domain/entities/news_article.dart';
+import '/core/usecase/usecase.dart';
+import '/features/ai_news/domain/entities/news_article.dart';
 import '../repository/ai_news_repository.dart';
 
 class GetAINews extends UseCase<List<NewsArticle>, NoParameters>{

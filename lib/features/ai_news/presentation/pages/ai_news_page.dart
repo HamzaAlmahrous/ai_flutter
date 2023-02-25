@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tmdb_project/features/ai_news/presentation/bloc/ai_news_events.dart';
+import '/features/ai_news/presentation/bloc/ai_news_events.dart';
 import '../../../../core/services/service_locator.dart';
 import '../bloc/ai_news_bloc.dart';
 import '../bloc/ai_news_states.dart';

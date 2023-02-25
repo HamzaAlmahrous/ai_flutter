@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:tmdb_project/core/error/failure.dart';
+import '/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:tmdb_project/core/usecase/usecase.dart';
-import 'package:tmdb_project/features/image_detector/domain/repository/image_detector_repository.dart';
+import '/core/usecase/usecase.dart';
+import '/features/image_detector/domain/repository/image_detector_repository.dart';
 
 class DetectImage extends UseCase<String, DetectImageParams>{
   final ImageDetectorRepository imageDetectorRepository;

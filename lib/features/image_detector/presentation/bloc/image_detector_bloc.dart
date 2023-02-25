@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tmdb_project/features/image_detector/domain/usecases/detect_image_uescase.dart';
-import 'package:tmdb_project/features/image_detector/presentation/bloc/image_detector_events.dart';
-import 'package:tmdb_project/features/image_detector/presentation/bloc/image_detector_states.dart';
+import '/features/image_detector/domain/usecases/detect_image_uescase.dart';
+import '/features/image_detector/presentation/bloc/image_detector_events.dart';
+import '/features/image_detector/presentation/bloc/image_detector_states.dart';
 
 class ImageDetectorBloc extends Bloc<ImageDetectorEvent, ImageDetectorState> {
   

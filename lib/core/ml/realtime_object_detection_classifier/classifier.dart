@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:image/image.dart' as image_lib;
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
-import 'package:tmdb_project/core/ml/realtime_object_detection_classifier/recognition.dart';
+import '/core/ml/realtime_object_detection_classifier/recognition.dart';
 
 import 'stats.dart';
 

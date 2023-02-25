@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_project/core/services/service_locator.dart';
-import 'package:tmdb_project/core/widgets/home_layout.dart';
+import 'core/services/service_locator.dart';
+import 'core/widgets/home_layout.dart';
 import 'core/util/themes.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ai App',
+      title: 'AI App',
       theme: appTheme(),
       initialRoute: HomeLayout.routeName,
       onGenerateRoute: (settings) {

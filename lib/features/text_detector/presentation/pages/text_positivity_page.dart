@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tmdb_project/features/text_detector/presentation/bloc/text_detector_bloc.dart';
-import 'package:tmdb_project/features/text_detector/presentation/bloc/text_detector_events.dart';
-import 'package:tmdb_project/features/text_detector/presentation/bloc/text_detector_states.dart';
-import 'package:tmdb_project/features/text_detector/presentation/widgets/text_detector_dialog.dart';
-import 'package:tmdb_project/features/text_detector/presentation/widgets/text_detector_card.dart';
-import 'package:tmdb_project/core/services/service_locator.dart';
+import '/features/text_detector/presentation/bloc/text_detector_bloc.dart';
+import '/features/text_detector/presentation/bloc/text_detector_events.dart';
+import '/features/text_detector/presentation/bloc/text_detector_states.dart';
+import '/features/text_detector/presentation/widgets/text_detector_dialog.dart';
+import '/features/text_detector/presentation/widgets/text_detector_card.dart';
+import '/core/services/service_locator.dart';
 
 // ignore: must_be_immutable
 class TextPositivityPage extends StatelessWidget {

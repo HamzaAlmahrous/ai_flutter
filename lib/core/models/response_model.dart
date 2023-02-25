@@ -1,4 +1,4 @@
-import 'package:tmdb_project/core/entities/response.dart';
+import '/core/entities/response.dart';
 
 class ResponseModel extends Response {
 

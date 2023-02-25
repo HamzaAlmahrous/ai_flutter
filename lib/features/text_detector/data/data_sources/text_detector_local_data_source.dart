@@ -1,4 +1,4 @@
-import 'package:tmdb_project/core/ML/text_classifier/classifier.dart';
+import '/core/ML/text_classifier/classifier.dart';
 
 abstract class TextDetectorLocalDataSource {
   Future<int> detectTextPositivity({required String text});

@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tmdb_project/core/util/themes.dart';
-import 'package:tmdb_project/features/image_detector/presentation/bloc/image_detector_bloc.dart';
-import 'package:tmdb_project/features/image_detector/presentation/bloc/image_detector_events.dart';
-import 'package:tmdb_project/features/image_detector/presentation/bloc/image_detector_states.dart';
-import 'package:tmdb_project/core/services/service_locator.dart';
+import '/core/util/themes.dart';
+import '/features/image_detector/presentation/bloc/image_detector_bloc.dart';
+import '/features/image_detector/presentation/bloc/image_detector_events.dart';
+import '/features/image_detector/presentation/bloc/image_detector_states.dart';
+import '/core/services/service_locator.dart';
 
 import '../widgets/image_result_widget.dart';
 import '../widgets/image_show_widget.dart';

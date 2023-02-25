@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:tmdb_project/core/models/response_model.dart';
-import 'package:tmdb_project/core/network/api_constant.dart';
-import 'package:tmdb_project/features/ai_news/data/models/news_article_model.dart';
+import '/core/models/response_model.dart';
+import '/core/network/api_constant.dart';
+import '/features/ai_news/data/models/news_article_model.dart';
 
 abstract class AINewsRemoteDataSource {
   Future<List<NewsArticleModel>> getAINews();

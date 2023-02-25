@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:tmdb_project/features/ai_news/domain/entities/news_article.dart';
+import '/features/ai_news/domain/entities/news_article.dart';
 
 class AINewsState extends Equatable{
   @override

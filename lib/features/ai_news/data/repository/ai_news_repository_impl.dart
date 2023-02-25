@@ -1,6 +1,6 @@
-import 'package:tmdb_project/core/error/failure.dart';
+import '/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:tmdb_project/features/ai_news/domain/entities/news_article.dart';
+import '/features/ai_news/domain/entities/news_article.dart';
 
 import '../../domain/repository/ai_news_repository.dart';
 import '../data_sources/ai_news_remote_datasource.dart';

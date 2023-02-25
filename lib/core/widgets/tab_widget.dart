@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_project/features/text_detector/presentation/pages/text_positivity_page.dart';
+import '/features/text_detector/presentation/pages/text_positivity_page.dart';
 
 class TabWidget extends StatelessWidget {
 

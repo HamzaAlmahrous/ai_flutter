@@ -2,7 +2,7 @@
 import 'package:image/image.dart' as img;
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 import 'dart:io';
-import 'package:tmdb_project/core/ML/image_classifier/classifier_quant.dart';
+import '/core/ML/image_classifier/classifier_quant.dart';
 
 abstract class ImageDetectorLocalDataSource {
   Future<String> detectImage({required String imagePath});
