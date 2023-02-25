@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tmdb_project/core/util/themes.dart';
-import 'package:tmdb_project/features/ai_news/domain/entities/news_article.dart';
 import 'package:tmdb_project/features/ai_news/presentation/bloc/ai_news_events.dart';
 import '../../../../core/services/service_locator.dart';
 import '../bloc/ai_news_bloc.dart';
 import '../bloc/ai_news_states.dart';
 import '../widgets/news_article_card.dart';
 
+// ignore: must_be_immutable
 class AINewsPage extends StatelessWidget {
   AINewsPage({super.key});
 

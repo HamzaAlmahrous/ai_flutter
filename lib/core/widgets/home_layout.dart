@@ -36,7 +36,15 @@ class _HomeLayoutState extends State<HomeLayout> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  height: 0.92 * height,
+                  height: height * 0.08,
+                  child: AppBar(
+                    centerTitle: true,
+                    title: const Text("AI APP"),
+                    backgroundColor: aiDarkPurple.withOpacity(0.7),
+                  ),
+                ),
+                SizedBox(
+                  height: 0.84 * height,
                   child: body,
                 ),
                 Container(
@@ -45,30 +53,39 @@ class _HomeLayoutState extends State<HomeLayout> {
                   height: height * 0.08,
                   color: aiDarkPurple,
                   child: GNav(
-                    onTabChange: (index){
-                      setState(() { 
-                        body = (index == 0 && selectedIndex != index) ? AINewsPage()
-                        : (index == 1 && selectedIndex != index)? TextPositivityPage()
-                        : (index == 2 && selectedIndex != index)? ImageClassifierPage()
-                        : (index == 3 && selectedIndex != index)? const RealTimeObjectDetectionPage()
-                        : Container();
-                        selectedIndex = index;
-                      });
-                    },
-                    backgroundColor: aiDarkPurple,
-                      rippleColor: aiDarkGrey, // tab button ripple color when pressed
+                      onTabChange: (index) {
+                        setState(() {
+                          body = (index == 0 && selectedIndex != index)
+                              ? AINewsPage()
+                              : (index == 1 && selectedIndex != index)
+                                  ? TextPositivityPage()
+                                  : (index == 2 && selectedIndex != index)
+                                      ? ImageClassifierPage()
+                                      : (index == 3 && selectedIndex != index)
+                                          ? const RealTimeObjectDetectionPage()
+                                          : Container();
+                          selectedIndex = index;
+                        });
+                      },
+                      backgroundColor: aiDarkPurple,
+                      rippleColor:
+                          aiDarkGrey, // tab button ripple color when pressed
                       hoverColor: aiGrey, // tab button hover color
                       haptic: false, // haptic feedback
-                      curve: Curves.easeInOutQuart, // tab animation curves                      gap: 8, // the tab button gap between icon and text
+                      curve: Curves
+                          .easeInOutQuart, // tab animation curves                      gap: 8, // the tab button gap between icon and text
                       color: aiDarkGrey, // unselected icon color
-                      activeColor:aiPurple, // selected icon and text color
+                      activeColor: aiPurple, // selected icon and text color
                       iconSize: 24, // tab button icon size
-                      tabBackgroundColor: aiPurple.withOpacity(0.1), // selected tab background color
-                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5), // navigation bar padding
+                      tabBackgroundColor: aiPurple
+                          .withOpacity(0.1), // selected tab background color
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 5), // navigation bar padding
                       tabs: const [
                         GButton(
                           icon: Icons.home_rounded,
-                          text: '  Home', 
+                          text: '  Home',
                         ),
                         GButton(
                           icon: Icons.text_fields_outlined,
