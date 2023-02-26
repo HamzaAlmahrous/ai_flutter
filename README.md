@@ -1,4 +1,4 @@
-# tmdb_project
+# AI app using flutter
 
 A new Flutter project.
 
@@ -6,10 +6,13 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+A few resources to get your first step in building ai app using flutter:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Text Classification using TensorFlow Lite Plugin for Flutter](https://medium.com/@am15hg/text-classification-using-tensorflow-lite-plugin-for-flutter-3b92f6655982)
+- [Real-time object detection using new TensorFlow Lite Flutter Support](https://medium.com/@am15hg/real-time-object-detection-using-new-tensorflow-lite-flutter-support-ea41263e801d)
+- [tflite](https://pub.dev/packages/tflite_flutter)
+
+- [NewsAPI](https://newsapi.org/)
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
