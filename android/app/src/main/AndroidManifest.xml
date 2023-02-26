@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tmdb_project">
    <application
-        android:label="tmdb_project"
+        android:label="AI"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

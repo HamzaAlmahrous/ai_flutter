@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison, constant_identifier_names
 
 import 'package:flutter/material.dart';
+import '../widgets/stats_row_widget.dart';
 import '/core/util/themes.dart';
 
 import '../../../../core/ml/realtime_object_detection_classifier/recognition.dart';
@@ -115,21 +116,3 @@ class _RealTimeObjectDetectionPageState extends State<RealTimeObjectDetectionPag
   }
 }
 
-/// Row for one Stats field
-class StatsRow extends StatelessWidget {
-  final String left;
-  final String right;
-
-  const StatsRow(this.left, this.right, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Text(left, style: TextStyle(color: aiWhite),), Text(right, style: TextStyle(color: aiWhite))],
-      ),
-    );
-  }
-}
